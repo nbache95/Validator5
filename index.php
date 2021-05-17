@@ -30,7 +30,7 @@
 			<h1>Page d'accueil</h1>
 			<form action="./process.php" method="POST">
 			<div class="form-group">
-				<label for="url" name="url">URL</label> 
+				<label for="url">URL</label> 
 				<input type="text" class="form-control" name="url" id="url" placeholder="Entrez l'url de votre site">
 			</div>
 			<div class="text-center">

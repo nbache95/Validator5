@@ -50,7 +50,7 @@
 			</div>
 			<div class="form-group">
 				<label for="societe">Société</label>
-				<input name="societe"type="text" class="form-control" id="societe" aria-describedby="annotation" placeholder="Entrez le nom de votre société">
+				<input name="societe" type="text" class="form-control" id="societe" aria-describedby="annotation" placeholder="Entrez le nom de votre société">
 				<small id="annotation" class="form-text text-muted">Ce champs n'est pas obligatoire.</small>
 			</div>
 			<div class="form-group">
