@@ -1,11 +1,25 @@
 <?php
-$url = $_GET['url']; 
-$comple_url = 'https://html5.validator.nu/?doc='.$url.'&out=json' ; 
-//$jsonText = file_get_contents('https://validator.w3.org/nu/?doc='.$url.'&out=json', false, $context);
-//$jsonArray = json_decode($jsonText,True);
-//echo $jsonArray;
-//$site = file_get_contents('https://html5.validator.nu/?doc='.$url.'&out=xml');
-//echo nl2br($site); 
+include_once('./class/api_html_class.php');
+include_once('./class/api_css_class.php');
+include_once('./class/api_lien_class.php');
+include_once('./class/api_mobile_class.php');
+
+$url = $_POST['url'];
+
+
+$valHtml		= new ValidationHtml($url);
+$valCss			= new ValidationCss($url);
+$valMobile		= new ValidationMobile($url);
+$valLien		= new ValidationLien($url);
+
+
+
+
+
+
+
+/*$site = file_get_contents('https://html5.validator.nu/?doc='.$url.'&out=xml');
+echo nl2br($site); */
 
 /*$curl_handle=curl_init();
 curl_setopt($curl_handle, CURLOPT_URL,'https://html5.validator.nu/?doc='.$url.'&out=xml');
@@ -18,7 +32,10 @@ echo $info;
 curl_close($curl_handle);*/
 
 
-$json_is = $complete_url; 
-$return = json_decode (file_get_contents($json_is), true); 
-echo $return ; 
+/*$return = json_decode (file_get_contents($comple_url), true); 
+echo $return ; */
+
+
+
+//$response = file_get_contents('http://domain/path/to/uri', false, $context);
 ?>

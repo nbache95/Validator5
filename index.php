@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<script src='api.js' async></script>
 		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+		<link rel="icon" href="./assets/check-circle-regular.png">
 	</head>
 	<body>
 		<header>
@@ -19,7 +20,7 @@
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav">
 						<li class="nav-item active"><a class="nav-link" href="index.php"><i class="fas fa-home"></i>Accueil</a></li>
-						<li class="nav-item active"><a class="nav-link" href="inscription.php"><i class="fas fa-user-plus"></i>Inscription</a></li>
+						<li class="nav-item active"><a class="nav-link" href="inscription.php?fpass=false"><i class="fas fa-user-plus"></i>Inscription</a></li>
 						<li class="nav-item active"><a class="nav-link" href="connexion.php"><i class="fas fa-user-check"></i>Connexion</a></li>
 					</ul>
 				</div>
@@ -27,7 +28,7 @@
 		</header>
 		<div class="container">
 			<h1>Page d'accueil</h1>
-			<form action="./process.php" method="GET">
+			<form action="./process.php" method="POST">
 			<div class="form-group">
 				<label for="url" name="url">URL</label> 
 				<input type="text" class="form-control" name="url" id="url" placeholder="Entrez l'url de votre site">

@@ -1,19 +1,32 @@
 <?php 
 class Session
 {
-    private int $id_session; 
-
-
-    public function __constructeur($id_sess)
+    private int $seid; 
+	private int $semail; 
+	
+	/**
+     * execute 'intert into' query 
+     * @param string $sql sql query string to execute 
+     */
+	 
+    public function __construct($id, $mail)
     {
-        $this->id_session = $id_sess;
+        $this->seid = $id;
+		$this->semail = $mail;
     }
 
     public function start()
     {
         session_start();
         array_push($_SESSION, ); 
-        $_SESSION[] = $id_session; 
+        $_SESSION['id'] = $id_session;
+		$_SESSION['status'] = "open";
     }
+	
+	public function stop()
+	{
+		session_destroy(); 
+		$_SESSION['status'] = "close"; 
+	}
 }
 ?>
