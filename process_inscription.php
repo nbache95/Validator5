@@ -1,6 +1,24 @@
 <?php 
-include_once("./class/register.php"); 
-include_once("./class/database.php");
+// début phpMailer
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\Exception;
+
+// require 'path/to/PHPMailer/src/Exception.php';
+// require 'path/to/PHPMailer/src/PHPMailer.php';
+// require 'path/to/PHPMailer/src/SMTP.php';
+// include_once("./class/register.class.php"); 
+// include_once("./class/database.class.php");
+
+
+// if (!$mail->send()) {
+//     echo $mail->ErrorInfo;
+// } else{
+//     echo 'Message bien envoyé';
+// }
+
+
+
+
 $name = $_GET["nom"];
 $surname = $_GET["prenom"];
 $mail = $_GET["email"];

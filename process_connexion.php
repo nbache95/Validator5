@@ -1,6 +1,6 @@
 <?php
-include_once("./class/authentification.php"); 
-include_once("./class/database.php"); 
+include_once("./class/authentification.class.php"); 
+include_once("./class/database.class.php"); 
 
 $login = $_GET["mail"];
 $passwd = $_GET["mdp"];

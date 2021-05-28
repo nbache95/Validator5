@@ -6,7 +6,6 @@
 		<link rel="stylesheet" type="text/css" href="./assets/style.css"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<script src='api.js' async></script>
 		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 		<link rel="icon" href="./assets/check-circle-regular.png">
 	</head>
@@ -31,13 +30,63 @@
 			<form action="./process.php" method="POST">
 			<div class="form-group">
 				<label for="url">URL</label> 
-				<input type="text" class="form-control" name="url" id="url" placeholder="Entrez l'url de votre site">
+				<input type="text" class="form-control" name="url" id="url" placeholder="Entrez l'url de votre site" required>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" id="checkhtml" name="checkUrl[]" value="checkhtml">
+				<label class="form-check-label" for="checkhtml">HTML / XML</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" id="checkCSS" name="checkUrl[]" value="checkCSS">
+				<label class="form-check-label" for="checkCSS">CSS</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" id="checkMobileV" name="checkUrl[]" value="checkMobileV">
+				<label class="form-check-label" for="checkMobileV">Version Mobile</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" id="checkLink" name="checkUrl[]" value="checkLink">
+				<label class="form-check-label" for="checkLink">Lien</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" id="checkAccess" name="checkUrl[]" value="checkAccess">
+				<label class="form-check-label" for="checkAccess">Accessibilité</label>
 			</div>
 			<div class="text-center">
 				<button type="submit"  class="btn btn-outline-info" id="btn_submit_url">OK</button>
 			</div>
 			</form>
-		
+			<!-- <script src="https://apis.google.com/js/api.js"></script>
+<script>
+  /**
+   * Sample JavaScript code for searchconsole.urlTestingTools.mobileFriendlyTest.run
+   * See instructions for running APIs Explorer code samples locally:
+   * https://developers.google.com/explorer-help/guides/code_samples#javascript
+   */
+
+  function loadClient() {
+    gapi.client.setApiKey("AIzaSyA4WVYApWoOhrC55TBF2purhUcO8M1K_cg");
+    return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/searchconsole/v1/rest")
+        .then(function() { console.log("GAPI client loaded for API"); },
+              function(err) { console.error("Error loading GAPI client for API", err); });
+  }
+  // Make sure the client is loaded before calling this method.
+  function execute() {
+    return gapi.client.searchconsole.urlTestingTools.mobileFriendlyTest.run({
+      "resource": {
+        "url": "https://validator5.alwaysdata.net"
+      }
+    })
+        .then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                console.log("Response", response);
+              },
+              function(err) { console.error("Execute error", err); });
+  }
+  gapi.load("client");
+</script>
+<button onclick="loadClient()">load</button>
+<button onclick="execute()">execute</button> -->
 			<footer class="bg-light text-center text-lg-start fixed-bottom">
 			<div class="text-center p-3 d-flex justify-content-center">
 				<!--<div><figure><img src="./assets/logo_ucp.png" alt="logo ucp" class="img-thumbnail"/></figure></div>-->
